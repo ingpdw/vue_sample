@@ -27,44 +27,54 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  @import "../assets/scss/app.scss";
+
   li {
     position: relative;
     padding: 15px 75px 15px 0;
     font-size: 16px;
     border-bottom: 1px solid #efefef;
-  }
 
-  .icon {
-    display: inline-block;
-    min-width: 44px;
-    height: 22px;
-    margin-right: 4px;
-    font-size: 13px;
-    color: #bc8d5d;
-    line-height: 20px;
-    text-align: center;
-    border: 1px solid #bc8d5d;
-    border-radius: 22px;
-  }
+    @include bp(pc) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
 
-  .icon.minus {
-    color: #a2a8b2;
-    border-color: #a2a8b2;
-  }
+    .icon {
+      display: inline-block;
+      min-width: 44px;
+      height: 22px;
+      margin-right: 4px;
+      font-size: 13px;
+      color: #bc8d5d;
+      line-height: 20px;
+      text-align: center;
+      border: 1px solid #bc8d5d;
+      border-radius: 22px;
 
-  .title {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
+      &.minus {
+          color: #a2a8b2;
+          border-color: #a2a8b2;
+      }
 
-  .date {
-    position: absolute;
-    right: 0;
-    top: 17px;
-    font-size: 14px;
-    color: #8c919a;
-  }
+      @include bp(pc) {
+          min-width: 55px;
+          margin-right: 2px;
+      }
+    }
 
+    .date {
+      position: absolute;
+      right: 0;
+      top: 17px;
+      font-size: 14px;
+      color: #8c919a;
+
+      @include bp(pc) {
+          font-size: 15px;
+      }
+    }
+  }
 </style>

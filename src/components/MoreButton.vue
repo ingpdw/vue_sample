@@ -1,5 +1,5 @@
 <template>
-  <button @click="more">더보기</button>
+  <button class="btn" @click="more">More</button>
 </template>
 
 <script>
@@ -14,18 +14,18 @@ export default {
 };
 </script>
 
-<style scoped>
-  button {
-    display: block;
-    margin-top:10px;
+<style lang="scss" scoped>
+  @import "../assets/scss/app.scss";
+
+  .btn {
     width: 100%;
-    height: 60px;
-    border: 1px solid #efefef;
-    font-weight: 300;
+    height: 48px;
     font-size: 16px;
-    line-height: 58px;
-    color: #747880;
-    background: transparent;
-    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+
+    &:hover {
+      border-color: rgba(#a2a8b2, .6);
+    }
   }
 </style>

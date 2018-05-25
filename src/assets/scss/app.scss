@@ -1,0 +1,23 @@
+@import
+"util/_variable",
+"util/_mixin";
+
+@import
+"base/_normalize.4.0.0",
+"base/_reset";
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn {
+  height: 32px;
+  padding: 0 5px;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #efefef;
+  background: transparent;
+}

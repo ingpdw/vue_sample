@@ -21,6 +21,8 @@ import Article from './components/Article';
 import Reload from './components/Reload';
 import MoreButton from './components/MoreButton';
 
+const listAPI = '/static/data.json';
+
 export default {
   name: 'App',
   components: {
@@ -31,13 +33,10 @@ export default {
     MoreButton,
   },
   mounted() {
-    this.axios.get('/static/data.json')
-    .then( (res) => {
-      this.items = res.data;
-    })
-    .catch( (error) => {
-      console.log(error);
-    });
+    this.axios.get(listAPI)
+      .then((res) => {
+        this.items = res.data;
+      });
   },
   data() {
     return {
@@ -46,19 +45,21 @@ export default {
   },
   methods: {
     more() {
-      this.axios.get('/static/data.json')
-      .then( (res) => {
-        this.items.pageList.push(...res.data.pageList);
-      });
+      this.axios.get(listAPI)
+        .then((res) => {
+          this.items.pageList.push(...res.data.pageList);
+        });
     },
   },
 };
 </script>
 
-<style>
-  body {
-    font-family: -apple-system,BlinkMacSystemFont,Roboto,"맑은 고딕","Malgun Gothic",
-    "MS PGothic","돋움",Dotum,sans-serif; overflow-y: scroll; }
-  ul, ol, li {  margin: 0;padding: 0;list-style-type: none; }
-  #app { margin:20px; }
+<style lang="scss">
+  @import "./assets/scss/app.scss";
+
+  $margin: 20px;
+
+  #app {
+    margin:$margin;
+  }
 </style>
