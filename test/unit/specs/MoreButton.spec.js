@@ -18,7 +18,10 @@ describe('MoreButton.vue', () => {
     const spy = jest.spyOn(cmp.vm, 'more');
     cmp.update();
 
-    const el = cmp.find('.btn').trigger('click');
+    const el = cmp.find('.more').trigger('click');
+
     expect(cmp.vm.more).toBeCalled();
+
+    expect(cmp.vm.more).toHaveBeenCalledTimes(1);
   });
 });

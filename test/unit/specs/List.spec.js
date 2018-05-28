@@ -20,6 +20,6 @@ describe('List.vue', () => {
 
     const list = cmp.find('ul');
 
-    expect(list.findAll('li').length).toBe(2);
+    expect(list.findAll('li')).toHaveLength(2);
   });
 });
