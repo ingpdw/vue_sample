@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped>
-  .menu {
+  div.menu {
     text-align: right;
   }
 </style>

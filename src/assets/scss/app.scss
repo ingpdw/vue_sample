@@ -16,8 +16,11 @@ ul, ol, li {
   height: 32px;
   padding: 0 5px;
   line-height: 30px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   border: 1px solid #efefef;
   background: transparent;
+  &:hover {
+    border-color: rgba(#a2a8b2, .6);
+  }
 }

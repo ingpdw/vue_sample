@@ -55,13 +55,13 @@ export default {
       border-radius: 22px;
 
       &.minus {
-          color: #a2a8b2;
-          border-color: #a2a8b2;
+        color: #a2a8b2;
+        border-color: #a2a8b2;
       }
 
       @include bp(pc) {
-          min-width: 55px;
-          margin-right: 2px;
+        min-width: 55px;
+        margin-right: 2px;
       }
     }
 
@@ -73,7 +73,7 @@ export default {
       color: #8c919a;
 
       @include bp(pc) {
-          font-size: 15px;
+        font-size: 15px;
       }
     }
   }
