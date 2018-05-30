@@ -1,14 +1,24 @@
 <template>
-  <button class="btn more" @click="more">More</button>
+  <button class="btn more" @click="more">{{name|capitalize}}</button>
 </template>
 
 <script>
+import capitalize from '@/filters/capitalize';
+
 export default {
   name: 'MoreButton',
+  data() {
+    return {
+      name: 'more',
+    };
+  },
   methods: {
     more() {
       this.$emit('more');
     },
+  },
+  filters: {
+    capitalize,
   },
 };
 </script>

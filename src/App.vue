@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import Menu from './components/Menu';
-import List from './components/List';
-import Article from './components/Article';
-import Reload from './components/Reload';
-import MoreButton from './components/MoreButton';
+import Menu from '@/components/Menu';
+import List from '@/components/List';
+import Article from '@/components/Article';
+import Reload from '@/components/Reload';
+import MoreButton from '@/components/MoreButton';
 
 const listAPI = '/static/data.json';
 
