@@ -3,7 +3,7 @@
   "pageList":[
     { "type": "DEPOSIT", "amount": 5, "reason": "글 작성", "dateTime": "2018-05-04T01:58:33.069Z" },
     { "type": "DEPOSIT", "amount": 5, "reason": "글 작성", "dateTime": "2018-05-03T11:40:04.388Z" },
-    { "type": "", "amount": 5, "reason": "글 작성", "dateTime": "2018-05-03T08:22:24.594Z" },
+    { "type": "", "amount": 5, "reason": "글 삭제", "dateTime": "2018-05-03T08:22:24.594Z" },
     { "type": "DEPOSIT", "amount": 5, "reason": "글 작성", "dateTime": "2018-05-02T06:28:39.595Z" },
     { "type": "DEPOSIT", "amount": 5, "reason": "글 작성", "dateTime": "2018-04-27T04:22:21.057Z" }
   ]

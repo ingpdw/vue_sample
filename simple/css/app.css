@@ -1,0 +1,7 @@
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{margin:0;}
+ul,li{margin:0;padding:0;list-style:none;}
+li{position:relative;padding:15px 75px 15px 0;font-size:16px;border-bottom:1px solid #efefef;}
+.list{margin:20px;}
+.icon{display:inline-block;min-width:55px;height:22px;margin-right:2px;border:1px solid #bc8d5d;border-radius:22px;font-size:13px;color:#bc8d5d;text-align:center;box-sizing:border-box;}
+.minus{color:#a2a8b2;border-color:#a2a8b2;}
