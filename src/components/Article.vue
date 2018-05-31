@@ -1,15 +1,22 @@
 <template>
   <li>
     <span class="icon" :class="cls">{{deposit}}</span>
-    <span class="title">{{symbol}} {{title}}</span>
+    <span class="title">{{symbol}} {{title | lowercase | capitalize}}</span>
     <span class="date">{{shortDate}}</span>
   </li>
 </template>
 
 <script>
+import lowercase from '@/filters/lowercase';
+import capitalize from '@/filters/capitalize';
+
 export default {
   name: 'Article',
   props: ['type', 'title', 'date'],
+  filters: {
+    lowercase,
+    capitalize,
+  },
   computed: {
     shortDate() {
       return this.date.substring(0, 10);
