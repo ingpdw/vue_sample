@@ -4,7 +4,7 @@
       <Reload></Reload>
     </Menu>
     <List>
-      <Article v-for="(item, index) in items.pageList"
+      <Article v-for="(item, index) in list"
         :key="index"
         :title="item.reason"
         :type="item.type"
@@ -21,8 +21,6 @@ import Article from '@/components/Article';
 import Reload from '@/components/Reload';
 import MoreButton from '@/components/MoreButton';
 
-const listAPI = '/static/data.json';
-
 export default {
   name: 'App',
   components: {
@@ -32,11 +30,13 @@ export default {
     Menu,
     MoreButton,
   },
+  computed: {
+    list() {
+      return this.$store.getters.list;
+    },
+  },
   mounted() {
-    this.axios.get(listAPI)
-      .then((res) => {
-        this.items = res.data;
-      });
+    this.$store.dispatch('getList');
   },
   data() {
     return {
@@ -45,10 +45,7 @@ export default {
   },
   methods: {
     more() {
-      this.axios.get(listAPI)
-        .then((res) => {
-          this.items.pageList.push(...res.data.pageList);
-        });
+      this.$store.dispatch('addList');
     },
   },
 };
