@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Menu from '@/components/Menu';
 import List from '@/components/List';
 import Article from '@/components/Article';
@@ -30,11 +31,9 @@ export default {
     Menu,
     MoreButton,
   },
-  computed: {
-    list() {
-      return this.$store.getters.list;
-    },
-  },
+  computed: mapGetters([
+    'list',
+  ]),
   mounted() {
     this.$store.dispatch('getList');
   },
