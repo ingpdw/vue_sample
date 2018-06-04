@@ -12,6 +12,4 @@ describe('Reload.vue', () => {
 
     expect(vm.$el.textContent).toContain('Reload');
   });
-
-
 });
