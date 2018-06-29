@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Menu>
+      ({{tick}})
       <Reload></Reload>
     </Menu>
     <List>
@@ -21,6 +22,7 @@ import List from '@/components/List';
 import Article from '@/components/Article';
 import Reload from '@/components/Reload';
 import MoreButton from '@/components/MoreButton';
+import timer from '@/mixins/timer';
 
 export default {
   name: 'App',
@@ -31,20 +33,22 @@ export default {
     Menu,
     MoreButton,
   },
+  mixins: [timer],
   computed: mapGetters([
     'list',
   ]),
   mounted() {
+    this.start(this.count);
     this.$store.dispatch('getList');
-  },
-  data() {
-    return {
-      items: {},
-    };
   },
   methods: {
     more() {
       this.$store.dispatch('addList');
+    },
+    count(tick) {
+      if (tick === 100) {
+        this.stop();
+      }
     },
   },
 };
